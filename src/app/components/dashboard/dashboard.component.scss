@@ -1,0 +1,14 @@
+.dashboard {
+  .sort-by {
+    float: right;
+  }
+
+  .thumbnails-container {
+    width: 100%;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 250px);
+    grid-template-rows: auto;
+    grid-gap: 20px;
+  }
+}

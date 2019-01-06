@@ -1,0 +1,90 @@
+@import '../../../scss/variables';
+
+.video-details {
+  padding-top: 10px;
+
+  .player { 
+    display: flex;
+    justify-content: center;
+  }
+
+  .info-comments {
+    padding: 0 10px;
+
+    .info, .likes {
+      display: flex;
+      flex-direction: row;
+    }
+  
+    .info {
+      justify-content: space-between;
+      padding: 10px 5px;
+  
+      .description {
+        .title, .channel {
+          color: white;
+        }
+  
+        .views, .date {
+          color: $text-color;
+        }
+  
+        .channel, .date {
+          margin-left: 20px;
+        }
+  
+        .title {
+          font-size: 1.2rem;
+        }
+  
+        .channel {
+          margin-top: 10px;
+        }
+      }
+  
+      .likes {
+        height: max-content;
+        align-items: center;
+  
+        * {
+          margin: 0 5px;
+          color: $text-color;
+        }
+      }
+    }
+  
+    .comments-container {
+      border-top: 1px solid $text-color;;
+  
+      .comments-header {
+        font-size: 1rem;
+        margin-top: 25px;
+      }
+
+      .comment {
+        width: 100%;
+        padding: 15px 20px;
+
+        .author-name, .comment-text {
+          font-size: 0.9rem;
+        }
+
+        .author-name {
+          margin-right: 15px;
+          text-decoration: none;
+          color: white;
+          font-weight: bold;
+        }
+
+        .date {
+          font-size: 0.7rem;
+          color: $text-color;
+        }
+
+        .comment-text {
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+}

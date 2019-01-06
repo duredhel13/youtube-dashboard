@@ -1,0 +1,6 @@
+mat-card.video-thumbnail(routerLink="/detail/{{video.id.videoId}}")
+  .thumbnail-image([style.background]="'url(' + video.snippet.thumbnails.high.url + ')'")
+  .thumbnail-info
+    .thumbnail-title {{video.snippet.title}}
+    .thumbnail-channel {{video.snippet.channelTitle}}
+    .thumbnail-date {{video.snippet.publishedAt | timeFromNow}}

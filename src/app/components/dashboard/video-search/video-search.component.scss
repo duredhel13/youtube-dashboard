@@ -1,0 +1,28 @@
+.search {
+  margin-top: 10px;
+  position: relative;
+
+  .mat-form-field {
+    width: 100%;
+  }
+
+  .search-results {
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+
+    li {
+      color: black;
+      padding: 10px 15px;
+      cursor: pointer;
+      list-style-type: none;
+
+      &:hover {
+        background-color: lightgrey;
+      }
+    }
+  }
+}

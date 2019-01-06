@@ -1,0 +1,9 @@
+.dashboard
+  app-video-search((enterPressed)="loadVideos($event)")
+  mat-form-field.sort-by
+    mat-select(placeholder="Sort By", id="sort-by", [(ngModel)]="options.order", (ngModelChange)="getVideos()")
+      mat-option([value]="'date'") Date
+      mat-option([value]="'rating'") Rating
+      mat-option([value]="'relevance'") Relevance
+  .thumbnails-container
+    app-video-thumbnail(*ngFor="let video of videos", [video]="video")

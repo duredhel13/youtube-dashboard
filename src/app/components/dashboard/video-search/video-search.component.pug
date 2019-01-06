@@ -1,0 +1,6 @@
+.search
+  mat-form-field
+    input(matInput, #searchBox, id="search-box", placeholder="Search Videos", (keyup)="search($event, searchBox.value)")
+  ul.search-results
+    li(*ngFor="let video of videos | async")
+      span(routerLink="/detail/{{video.id.videoId}}") {{video.snippet.title}}

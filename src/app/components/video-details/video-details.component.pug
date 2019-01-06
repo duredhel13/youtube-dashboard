@@ -1,0 +1,20 @@
+.video-details(*ngIf="video && comments")
+  .player([innerHTML]="video.player.embedHtml | sanitizeHtml")
+  .info-comments
+    .info
+      .description
+        .title {{video.snippet.title}}
+        .views {{video.statistics.viewCount | number}} views
+        .channel {{video.snippet.channelTitle}}
+        .date Published {{video.snippet.publishedAt | timeFromNow }}
+      .likes
+        mat-icon thumb_up
+        span {{video.statistics.likeCount | number}}
+        mat-icon thumb_down
+        span {{video.statistics.dislikeCount | number}}
+    .comments-container
+      .comments-header {{video.statistics.commentCount | number}} Comments
+      .comment(*ngFor="let comment of comments")
+        a.author-name(href="{{comment.snippet.topLevelComment.snippet.authorChannelUrl}}") {{comment.snippet.topLevelComment.snippet.authorDisplayName}}
+        span.date {{comment.snippet.topLevelComment.snippet.publishedAt | timeFromNow }}
+        .comment-text([innerHTML]="comment.snippet.topLevelComment.snippet.textDisplay | sanitizeHtml")
